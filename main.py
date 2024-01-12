@@ -35,6 +35,7 @@ users = []
 async def get_user():
     return users
 
+
 @app.post("/users")
 async def create_user(user: User):
     users.append(user)
