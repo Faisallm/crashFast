@@ -1,0 +1,77 @@
+[
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Query",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "class User(BaseModel):\n    # by default these fields are required\n    # unless we wrap types with Optional\n    email: str\n    is_active: bool\n    bio: Optional[str] = None\n# temporary in-memory \nusers = []\n# returns list of users\n@app.get(\"/users\", response_model=List[User])",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI(\n    title=\"Faisal Documentation\",\n    description=\"The awesomeness and coolness of Faisality\",\n    version=\"0.0.1\",\n    terms_of_service=\"https://www.kakaki.cc\",\n    contact={\n        \"name\": \"Faisal the Amazing\",\n        \"url\": \"http://x-force.example.com/contact/\",\n        \"email\": \"Faisallawan1997@gmail.com\",\n    },",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "users",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "users = []\n# returns list of users\n@app.get(\"/users\", response_model=List[User])\nasync def get_user():\n    return users\n@app.post(\"/users\")\nasync def create_user(user: User):\n    users.append(user)\n    return \"Success\"\n# get a single user",
+        "detail": "main",
+        "documentation": {}
+    }
+]
